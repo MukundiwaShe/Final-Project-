@@ -1,0 +1,62 @@
+[
+  {
+    "fact": "Malaria is caused by a Plasmodium parasite transmitted through mosquito bites.",
+    "category": "cause"
+  },
+  {
+    "fact": "More than 400,000 people die of malaria every year.",
+    "category": "mortality"
+  },
+  {
+    "fact": "Children under 5 are the most vulnerable group affected by malaria.",
+    "category": "vulnerable"
+  },
+  {
+    "fact": "Malaria is preventable and curable with timely treatment.",
+    "category": "treatment"
+  },
+  {
+    "fact": "Africa carries 94% of the world's malaria cases and deaths.",
+    "category": "region"
+  },
+  {
+    "fact": "Insecticide-treated bed nets are a major preventive tool against malaria.",
+    "category": "prevention"
+  },
+  {
+    "fact": "There are 5 types of malaria parasites that infect humans.",
+    "category": "cause"
+  },
+  {
+    "fact": "Plasmodium falciparum is the most deadly malaria parasite.",
+    "category": "cause"
+  },
+  {
+    "fact": "The World Health Organization recommends artemisinin-based combination therapies (ACTs) to treat malaria.",
+    "category": "treatment"
+  },
+  {
+    "fact": "Malaria symptoms include fever, headache, and chills, appearing 10–15 days after a mosquito bite.",
+    "category": "symptoms"
+  },
+  {
+    "fact": "The RTS,S/AS01 (Mosquirix) malaria vaccine is the first malaria vaccine recommended by WHO.",
+    "category": "prevention"
+  },
+  {
+    "fact": "Pregnant women are at higher risk of severe malaria and complications.",
+    "category": "vulnerable"
+  },
+  {
+    "fact": "Malaria can be diagnosed using Rapid Diagnostic Tests (RDTs) or microscopy.",
+    "category": "diagnosis"
+  },
+  {
+    "fact": "Indoor residual spraying is another malaria prevention method.",
+    "category": "prevention"
+  },
+  {
+    "fact": "Climate change and environmental conditions impact mosquito breeding and malaria transmission.",
+    "category": "region"
+  }
+]

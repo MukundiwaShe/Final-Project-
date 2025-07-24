@@ -1,0 +1,30 @@
+
+.ask-question-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.ask-question-container input {
+  width: 80%;
+  padding: 10px;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.ask-question-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.answer {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #fcf8f8;
+}

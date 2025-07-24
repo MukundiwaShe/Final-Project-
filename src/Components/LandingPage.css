@@ -1,0 +1,77 @@
+.landing-container {
+  min-height: 100vh;
+  background-color: #2e2e2e; 
+  color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.answer-box {
+  background-color: #1e1e1e;
+  color: #ffffff;             /* ✅ White text on dark */
+  border-left: 4px solid #28a745;
+}
+
+.landing-title {
+  font-size: 3rem;
+  color: #f7f0f0;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.landing-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: hwb(0 97% 0%);
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(10, 10, 10, 0.6);
+}
+
+.landing-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.landing-button:hover {
+  background-color: #1f7e34;
+}
+
+.why-section {
+  margin-top: 3rem;
+  max-width: 600px;
+  text-align: left;
+  background: rgba(41, 40, 40, 0.4);
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #fff;
+  
+}
+
+.why-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.why-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.why-section li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+.why-section:hover{
+  color: rgb(197, 192, 192);
+}

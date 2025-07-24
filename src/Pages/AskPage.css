@@ -1,0 +1,28 @@
+.ask-page {
+  min-height: 100vh;
+  background-color: #2e2e2e;
+  padding: 40px 20px;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ask-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ✳️ Centered Box Layout */
+.ask-box {
+  background-color: #33323248;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(2, 41, 7, 0.4); 
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}

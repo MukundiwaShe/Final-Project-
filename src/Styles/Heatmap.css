@@ -1,0 +1,25 @@
+.heatmap-container {
+  position: relative;
+  width: 100%;
+  background-color: #2e2e2e;
+  color: #fff;
+}
+
+.country-shape {
+  fill: #444;
+  stroke: #999;
+  stroke-width: 0.3;
+}
+
+.map-tooltip {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 10;
+  color: #fff;
+}

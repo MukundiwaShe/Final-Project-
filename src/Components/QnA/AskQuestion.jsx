@@ -1,26 +1,32 @@
+// src/Components/QnA/AskQuestion.jsx
 import React, { useState } from 'react';
 import malariaData from '../../Data/malariaData.json';
 import predefinedAnswers from '../../Data/predefinedAnswers.json';
+import Fuse from 'fuse.js';
 import './AskQuestion.css';
 
 export default function AskQuestion() {
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
 
+  // Fuse.js setup for fuzzy matching predefined questions
+  const fuse = new Fuse(predefinedAnswers, {
+    keys: ['question'],
+    threshold: 0.4, // controls how close the match has to be (lower = stricter)
+  });
+
   const handleAsk = () => {
     const lowerCaseQuestion = question.toLowerCase();
 
-    // 1. Try matching predefined/general questions
-    const generalMatch = predefinedAnswers.find(entry =>
-      lowerCaseQuestion.includes(entry.question)
-    );
+    // 🔍 Use Fuse.js to search for closest match
+    const result = fuse.search(lowerCaseQuestion);
 
-    if (generalMatch) {
-      setAnswer(generalMatch.answer);
+    if (result.length > 0) {
+      setAnswer(result[0].item.answer);
       return;
     }
 
-    // 2. Try matching malaria data by country or region
+    // 🔍 Fallback: check in malaria data
     const match = malariaData.find(entry =>
       lowerCaseQuestion.includes(entry.country?.toLowerCase()) ||
       lowerCaseQuestion.includes(entry.region?.toLowerCase())
@@ -35,12 +41,11 @@ export default function AskQuestion() {
 
   return (
     <div className="ask-question-container">
-      <h2>Ask a Malaria-Related Question</h2>
       <input
         type="text"
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
-        placeholder="Type your question here..."
+        placeholder="Type your question..."
       />
       <button onClick={handleAsk}>Ask</button>
       {answer && <p className="answer">{answer}</p>}

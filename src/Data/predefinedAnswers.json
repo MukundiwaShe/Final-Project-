@@ -18,5 +18,45 @@
   {
     "question": "can malaria be cured",
     "answer": "Yes, malaria can be cured with prescription medication, especially if diagnosed and treated early."
+  },
+  {
+    "question": "malaria tx",
+    "answer": "Malaria treatment (tx) includes antimalarial medications like artemisinin-based therapies. Early treatment is crucial."
+  },
+  {
+    "question": "malaria px",
+    "answer": "Malaria prevention (px) includes using nets, repellents, prophylactic drugs, and avoiding mosquito bites."
+  },
+  {
+    "question": "malaria test",
+    "answer": "Malaria can be diagnosed through blood tests that detect Plasmodium parasites."
+  },
+  {
+    "question": "how long does malaria last",
+    "answer": "With treatment, malaria symptoms can improve within a few days. Without treatment, it can persist and worsen."
+  },
+  {
+    "question": "malaria vaccine",
+    "answer": "Yes, there is a malaria vaccine (RTS,S/AS01), mainly used in some African regions for children."
+  },
+  {
+    "question": "why is malaria dangerous",
+    "answer": "Malaria is dangerous because it can cause severe complications like organ failure, coma, and death if untreated."
+  },
+  {
+    "question": "is malaria contagious",
+    "answer": "No, malaria is not spread from person to person like a cold. It's only spread through infected mosquito bites."
+  },
+  {
+    "question": "malaria in africa",
+    "answer": "Africa carries a high burden of malaria cases and deaths due to climate, mosquito population, and limited resources."
+  },
+  {
+    "question": "what causes malaria",
+    "answer": "Malaria is caused by Plasmodium parasites, which are transmitted by infected mosquitoes."
+  },
+  {
+    "question": "malaria shorthand",
+    "answer": "Common shorthand: 'tx' = treatment, 'px' = prevention. Ask anything and we’ll decode it!"
   }
 ]

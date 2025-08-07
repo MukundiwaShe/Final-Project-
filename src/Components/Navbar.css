@@ -2,14 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2e2e2e;
-  padding: 8px 20px;
+  background-color: transparent;
+  padding: 24px 20px; /* Increased top & bottom padding */
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Optional: if you want the entire bar to be lower on the page */
+.navbar-wrapper {
+  margin-top: 20px; /* pushes the whole navbar down */
 }
 
 

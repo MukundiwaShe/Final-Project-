@@ -7,7 +7,6 @@ import FAQ from './Pages/FAQ';
 import GetHelp from './Pages/GetHelp';
 import Heatmap from './Pages/Heatmap';       
 import RandomFacts from './Pages/RandomFacts'; 
-import MalariaTable from "./Components/MalariaTable";
 import Footer from './Components/Footer';
 
 
@@ -22,8 +21,7 @@ function App() {
         <Route path="/get-help" element={<GetHelp />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/heatmap" element={<Heatmap />} />         
-        <Route path="/random-facts" element={<RandomFacts />} /> 
-        <Route path="/table" element={<MalariaTable />} /> 
+        <Route path="/random-facts" element={<RandomFacts />} />  
       </Routes>
       <Footer />
     </Router>

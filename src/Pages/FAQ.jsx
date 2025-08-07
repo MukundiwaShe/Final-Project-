@@ -1,42 +1,62 @@
-import React from 'react';
-import './FAQ.css';
+import React, { useState } from "react";
+import "./FAQ.css";
 
-function FAQ() {
+export default function FAQ() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const faqs = [
+    {
+      question: "What is malaria?",
+      answer:
+        "Malaria is a life-threatening disease caused by parasites transmitted through the bites of infected Anopheles mosquitoes."
+    },
+    {
+      question: "How can I prevent malaria?",
+      answer:
+        "Prevention includes using insecticide-treated nets, taking antimalarial drugs, and controlling mosquito breeding sites."
+    },
+    {
+      question: "What are the symptoms of malaria?",
+      answer:
+        "Common symptoms include fever, chills, headache, nausea, vomiting, and sweating. Severe cases can lead to complications."
+    },
+    {
+      question: "Who is at risk of getting malaria?",
+      answer:
+        "Anyone can get malaria, but children under five, pregnant women, travelers to endemic areas, and people with weakened immune systems are at higher risk."
+    },
+    {
+      question: "How is malaria diagnosed and treated?",
+      answer:
+        "Malaria is diagnosed through blood tests and treated with antimalarial medications prescribed by a healthcare provider."
+    }
+  ];
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <div className="faq-container">
       <h1 className="faq-title">Frequently Asked Questions</h1>
-
-      <div className="faq-item">
-        <h3>🦟 What causes malaria?</h3>
-        <p>Malaria is caused by Plasmodium parasites, transmitted through the bite of infected female Anopheles mosquitoes.</p>
-      </div>
-
-      <div className="faq-item">
-        <h3>🌍 Where is malaria most common?</h3>
-        <p>Malaria is most common in sub-Saharan Africa, but also affects parts of Asia and South America.</p>
-      </div>
-
-      <div className="faq-item">
-        <h3>💉 Can malaria be prevented?</h3>
-        <p>Yes! Prevention includes using mosquito nets, repellents, insecticides, and taking antimalarial medication when traveling.</p>
-      </div>
-
-      <div className="faq-item">
-        <h3>🤒 What are the symptoms of malaria?</h3>
-        <p>Common symptoms include fever, chills, headache, nausea, vomiting, and fatigue. Severe cases can cause organ failure or death.</p>
-      </div>
-
-      <div className="faq-item">
-        <h3>🩺 How is malaria treated?</h3>
-        <p>Malaria is treated with antimalarial medications such as artemisinin-based combination therapies (ACTs). Early diagnosis is crucial.</p>
-      </div>
-
-      <div className="faq-item">
-        <h3>📊 Is this app based on real malaria data?</h3>
-        <p>Yes, the Q&A explorer uses real malaria data from trusted sources like WHO and African health datasets.</p>
+      <div className="faq-content">
+        <div className="faq-list">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`faq-item ${activeIndex === index ? "active" : ""}`}
+            >
+              <div className="faq-question" onClick={() => toggleFAQ(index)}>
+                {faq.question}
+                <span className="faq-icon">
+                  {activeIndex === index ? "-" : "+"}
+                </span>
+              </div>
+              <div className="faq-answer">{faq.answer}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
-
-export default FAQ;

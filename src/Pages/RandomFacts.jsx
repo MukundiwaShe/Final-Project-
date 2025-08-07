@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import facts from '../Data/malariaFacts.json';
 import '../Styles/RandomFacts.css';
 
@@ -20,6 +20,7 @@ export default function RandomFacts() {
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
+    // You can reset displayedFact here or keep it
     setDisplayedFact(null);
   };
 
@@ -29,9 +30,19 @@ export default function RandomFacts() {
         ? facts
         : facts.filter((fact) => fact.category === selectedCategory);
 
+    if (filteredFacts.length === 0) {
+      setDisplayedFact({ fact: "No facts available for this category.", category: selectedCategory });
+      return;
+    }
+
     const randomIndex = Math.floor(Math.random() * filteredFacts.length);
     setDisplayedFact(filteredFacts[randomIndex]);
   };
+
+  // Show a random fact on component mount and whenever category changes
+  useEffect(() => {
+    handleShowFact();
+  }, [selectedCategory]);
 
   return (
     <div className="facts-container">
@@ -49,9 +60,7 @@ export default function RandomFacts() {
         ))}
       </div>
 
-      <button className="show-fact-btn" onClick={handleShowFact}>
-        Show Random Fact
-      </button>
+    
 
       {displayedFact && (
         <div className="fact-box">

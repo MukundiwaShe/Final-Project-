@@ -1,25 +1,82 @@
-.heatmap-container {
-  position: relative;
-  width: 100%;
-  background-color: #2e2e2e;
+body {
+  margin: 0;
+  background-image: url('/public/images/malaria.webp');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden; /* prevent scroll */
+}
+ 
+.map-tooltip {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #0f0f0fcc;
   color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 10;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0  ;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  color: #333;
+}
+
+.mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.mini-table th,
+.mini-table td {
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  text-align: center;
+}
+
+.close-btn {
+  margin-top: 15px;
+  padding: 8px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #218838;
 }
 
 .country-shape {
-  fill: #444;
-  stroke: #999;
-  stroke-width: 0.3;
+  fill: #2e2e2e;
+  stroke: #555;
+  stroke-width: 0.5;
+  transition: all 0.2s;
 }
 
-.map-tooltip {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(0, 0, 0, 0.85);
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  pointer-events: none;
-  z-index: 10;
-  color: #fff;
+.country-shape:hover {
+  fill: #444;
+  cursor: pointer;
 }
